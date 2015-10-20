@@ -1,2 +1,2 @@
 # Naebor.github.io
-Home page for Naebor, Inc.
+Webpage for Naebor, Inc.
