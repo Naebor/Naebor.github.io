@@ -33,6 +33,26 @@
 
   <body>
     
+    Link = function() {
+    };
+
+     Link.prototype.openLink = function(el) {
+        var link = $(el).attr('data-href');
+        var win = null;
+        win = window.open(link, '_self');
+        win.focus();
+    };
+    
+    window.Link = new Link();
+    
+    $(function(){
+        $(document).on('click', '.fake-link', function(e) {
+            e.stopPropagation();
+            window.Link.openLink($(this));
+            return false;
+        });
+    });
+    
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -95,7 +115,7 @@
         </div>
         <div class="col-md-2" style="position:relative; top:-12.5px">
           <h3 style="font-size:28px">Bookin' It</h3>
-          <div><a href="http://bit.ly/PlayBookinIt" class="svg" style="display: inline-block; z-index: 1;" target="_blank"><object type="image/svg+xml" data="images/download-apple.svg" style="z-index: -1; pointer-events: none;"></object></a></div>
+          <div class="fake-link" data-href="http://bit.ly/PlayBookinIt"><object type="image/svg+xml" data="images/download-apple.svg"></object></div>
           <div class="fb-like" data-href="https://www.facebook.com/PlayBookinIt" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
         </div>
         <div class="col-md-8">
