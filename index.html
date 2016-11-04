@@ -33,28 +33,6 @@
 
   <body>
     
-    <script>
-      Link = function() {
-      };
-  
-       Link.prototype.openLink = function(el) {
-          var link = $(el).attr('data-href');
-          var win = null;
-          win = window.open(link, '_self');
-          win.focus();
-      };
-      
-      window.Link = new Link();
-      
-      $(function(){
-          $(document).on('click', '.fake-link', function(e) {
-              e.stopPropagation();
-              window.Link.openLink($(this));
-              return false;
-          });
-      });
-    </script>
-    
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -68,7 +46,7 @@
 
       <div class="masthead">
         </br></br>
-        <img src="images/naeborlogo.png" style="width:340.5px;height:80px;">
+        <img src="images/naeborlogo.png" style="width:330px;height:77.53px;">
         <!-- Static navbar -->
         </br></br></br>
         <nav class="navbar navbar-default">
@@ -101,6 +79,15 @@
 
     </div> <!-- /container -->
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div> -->
+
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -109,13 +96,16 @@
         </div>
         <div class="col-md-2" style="position:relative; top:-12.5px">
           <h3 style="font-size:28px">Bookin' It</h3>
-          <div class="fake-link" data-href="http://bit.ly/PlayBookinIt"><object type="image/svg+xml" data="images/download-apple.svg"></object></div>
-          <div class="fb-like" data-href="https://www.facebook.com/PlayBookinIt" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+          <div style="position:relative; top:-2.5px"><a href="https://itunes.apple.com/us/app/bookin-it/id1057026778?mt=8" target="_blank"><img src="images/download-apple.png" alt="App Store" width="135" height="40.05"></a></div>
+          <div class="fb-like" data-href="https://www.facebook.com/PlayBookinIt" data-layout="button" data-action="like" data-show-faces="false" data-share="true" style="position:relative; top:5px"></div>
         </div>
         <div class="col-md-8">
           <p style="font-size:16.5px">Join our hero as he jumps from book to book in a mystical never-ending library! A twist on the traditional side-scroller. Control the floating books to guide him! Change the openness and closeness of the books to launch at different angles with different trajectories. Test your reflexes and perception, and see how well you can Book It!</p>
         </div>
       </div>
+      
+      </br>
+      <iframe src="https://www.youtube.com/embed/lj0hKUS7Two" width="330px" height="185.46px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
       <hr>
 
@@ -134,4 +124,3 @@
     <script src="bootstrap-naebor/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
-
